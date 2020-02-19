@@ -1,0 +1,9 @@
+<h1>Welcome to Yelp-lookalike!</h1>
+<ul>
+  <% @restaurants.each do|res| %>
+  <li> <%= link_to res.name,restaurant_path(res)%></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a restaurant', new_restaurant_path %>
+
