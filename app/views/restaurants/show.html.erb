@@ -6,6 +6,13 @@
 
 <br>
 
+
 <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
 
+<ul>
+  <% @reviews.each do |review| %>
+  <li> <%= review.content  %> </li>
+  <% end %>
+</ul>
 
+<%= link_to 'Back', restaurants_path %>
